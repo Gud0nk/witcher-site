@@ -1,0 +1,61 @@
+﻿.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+}
+
+.menu-link.active-router {
+  color: #d9c07f;
+  border-bottom-color: #d9c07f;
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.region-title {
+  margin: 0 0 14px;
+  font-family: "Forum", serif;
+  font-size: clamp(48px, 7vw, 92px);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #efe0b4;
+  text-align: center;
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.45), 0 0 16px rgba(217, 192, 127, 0.22);
+}
+
+.gallery-slide-video {
+  display: grid;
+  grid-template-rows: 230px auto;
+  background: #0b0b0b;
+}
+
+.gallery-slide-video iframe {
+  width: 100%;
+  height: 230px;
+  border: none;
+  display: block;
+  background: #000;
+}
+
+.gallery-video-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #e5cb8f;
+  font-family: "Forum", serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 10px 12px 12px;
+}
+
+@media (max-width: 760px) {
+  .brand img {
+    height: 44px;
+  }
+}
