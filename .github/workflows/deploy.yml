@@ -2,7 +2,7 @@ name: deploy.yml
 on:
   push:
     branches:
-    - main  # или master, в зависимости от вашей ветки
+    - master  # или master, в зависимости от вашей ветки
 
 permissions:
   contents: write
