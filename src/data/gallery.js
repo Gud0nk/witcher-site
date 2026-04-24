@@ -3,7 +3,7 @@
     id: 'geralt',
     name: { ru: 'Геральт из Ривии', en: 'Geralt of Rivia' },
     tab: { ru: 'Геральт', en: 'Geralt' },
-    image: '/assets/real/geralt.jpg',
+    image: './assets/real/geralt.jpg',
     text: {
       ru: 'Ведьмак школы Волка, легендарный охотник на чудовищ. Путешествует по Континенту в поисках Цири и защищает людей от угроз Дикой Охоты.',
       en: 'A Wolf School witcher and legendary monster slayer. He travels across the Continent in search of Ciri and protects people from the Wild Hunt.'
@@ -13,7 +13,7 @@
     id: 'ciri',
     name: { ru: 'Цири', en: 'Ciri' },
     tab: { ru: 'Цири', en: 'Ciri' },
-    image: '/assets/real/ciri.webp',
+    image: './assets/real/ciri.webp',
     text: {
       ru: 'Наследница Старшей Крови и приемная дочь Геральта. Ее способности перемещаться между мирами делают ее ключом к судьбе всего мира.',
       en: 'Heiress of the Elder Blood and Geralt\'s adopted daughter. Her world-hopping powers make her key to the fate of the entire world.'
@@ -23,7 +23,7 @@
     id: 'yennefer',
     name: { ru: 'Йеннифэр из Венгерберга', en: 'Yennefer of Vengerberg' },
     tab: { ru: 'Йеннифэр', en: 'Yennefer' },
-    image: '/assets/real/enifer.jpg',
+    image: './assets/real/enifer.jpg',
     text: {
       ru: 'Одна из самых сильных чародеек Севера. Стратег и маг, которая готова на все ради Цири и людей, которых считает семьей.',
       en: 'One of the most powerful sorceresses of the North. A strategist and mage ready to do anything for Ciri and those she calls family.'
@@ -33,7 +33,7 @@
     id: 'triss',
     name: { ru: 'Трисс Меригольд', en: 'Triss Merigold' },
     tab: { ru: 'Трисс', en: 'Triss' },
-    image: '/assets/real/triss.jpg',
+    image: './assets/real/triss.jpg',
     text: {
       ru: 'Талантливая чародейка и верный союзник Геральта. В Новиграде спасает магов от преследований и помогает в решающих сражениях.',
       en: 'A talented sorceress and trusted ally of Geralt. In Novigrad she helps persecuted mages and supports decisive battles.'

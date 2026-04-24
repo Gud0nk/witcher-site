@@ -6,7 +6,7 @@ import { useLocale } from '../composables/useLocale'
 const route = useRoute()
 const { locale, t, setLocale } = useLocale()
 
-const regionPaths = ['/velen', '/skellige', '/white-orchard', '/kaer-morhen', '/toussaint']
+const regionPaths = ['/velen', '/skellige', '/white-orchard', '/kaer-morhen', '/toussaint', '/gunterworld']
 const miscPaths = ['/characters', '/monsters']
 
 const isHome = computed(() => route.path === '/')
@@ -32,6 +32,7 @@ const isMisc = computed(() => miscPaths.includes(route.path))
             <RouterLink class="submenu-link" :class="{ active: route.path === '/white-orchard' }" to="/white-orchard">{{ t('whiteOrchard') }}</RouterLink>
             <RouterLink class="submenu-link" :class="{ active: route.path === '/kaer-morhen' }" to="/kaer-morhen">{{ t('kaerMorhen') }}</RouterLink>
             <RouterLink class="submenu-link" :class="{ active: route.path === '/toussaint' }" to="/toussaint">{{ t('toussaint') }}</RouterLink>
+            <RouterLink class="submenu-link" :class="{ active: route.path === '/gunterworld' }" to="/gunterworld">{{ t('gunterworld') }}</RouterLink>
           </div>
         </div>
 

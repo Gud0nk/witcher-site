@@ -13,6 +13,7 @@ const routes = [
     { path: '/white-orchard', component: () => import('../pages/WhiteOrchardPage.vue') },
     { path: '/kaer-morhen', component: () => import('../pages/KaerMorhenPage.vue') },
     { path: '/toussaint', component: () => import('../pages/ToussaintPage.vue') },
+    { path: '/gunterworld', component: () => import('../pages/GunterworldPage.vue') },
 ]
 
 export default createRouter({
