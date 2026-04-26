@@ -1,0 +1,1 @@
+import{A as e,C as t,m as n}from"./AppFooter-BDUTy4DW.js";import{t as r}from"./RegionMapPage-CWiYoQDG.js";import{t as i}from"./regions-BtuBD8JJ.js";var a={__name:`ToussaintPage`,setup(a){let{regions:o}=i;return(i,a)=>(t(),n(r,{region:e(o).toussaint},null,8,[`region`]))}};export{a as default};

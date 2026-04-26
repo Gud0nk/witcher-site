@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Bestiary Placeholder</title>
+  <desc id="desc">Decorative placeholder image for monster cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1b1b"/>
+      <stop offset="50%" stop-color="#101010"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0%" stop-color="#d9c07f" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d9c07f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect width="1200" height="700" fill="url(#glow)"/>
+
+  <g opacity="0.85">
+    <path d="M600 150l90 170-90 230-90-230z" fill="#b3272b"/>
+    <path d="M520 185l80 150-80 185-80-185z" fill="#7b1b1e"/>
+    <path d="M680 185l80 150-80 185-80-185z" fill="#7b1b1e"/>
+  </g>
+
+  <text x="50%" y="80%" fill="#d9c07f" font-size="56" font-family="Georgia, serif" text-anchor="middle" letter-spacing="6">
+    BESTIARY
+  </text>
+</svg>
