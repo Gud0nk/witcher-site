@@ -1,8 +1,10 @@
-﻿<script setup>
+<script setup>
 import { computed, ref } from 'vue'
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
-import { regions } from '../data/regions'
+import regionsData from '../data/regions.json'
+
+const { regions } = regionsData
 import { useLocale } from '../composables/useLocale'
 import { useReveal } from '../composables/useUiEffects'
 

@@ -2,13 +2,14 @@
 import { computed, ref } from 'vue'
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
-import { monsterGroups, monsters } from '../data/monsters'
+import monstersData from '../data/monsters.json'
 import { useLocale } from '../composables/useLocale'
 import { useReveal } from '../composables/useUiEffects'
 
 const query = ref('')
 const selectedGroup = ref('all')
 const { t } = useLocale()
+const { monsterGroups, monsters } = monstersData
 
 const options = computed(() => ['all', ...monsterGroups])
 

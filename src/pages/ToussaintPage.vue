@@ -1,6 +1,8 @@
-﻿<script setup>
+<script setup>
 import RegionMapPage from '../components/RegionMapPage.vue'
-import { regions } from '../data/regions'
+import regionsData from '../data/regions.json'
+
+const { regions } = regionsData
 </script>
 
 <template>

@@ -2,9 +2,11 @@
 import { computed, ref } from 'vue'
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
-import { characterGroups } from '../data/characters'
+import charactersData from '../data/characters.json'
 import { useLocale } from '../composables/useLocale'
 import { useReveal } from '../composables/useUiEffects'
+
+const { characterGroups } = charactersData
 
 const query = ref('')
 const selectedGroup = ref('all')

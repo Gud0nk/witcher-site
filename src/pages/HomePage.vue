@@ -2,11 +2,12 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
-import { gallerySets, heroSlides } from '../data/gallery'
+import galleryData from '../data/gallery.json'
 import { useLocale } from '../composables/useLocale'
 import { useReveal } from '../composables/useUiEffects'
 
 const { locale, t } = useLocale()
+const { gallerySets, heroSlides } = galleryData
 
 const activeHero = ref(0)
 const heroTimer = ref(null)
