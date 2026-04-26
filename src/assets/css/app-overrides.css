@@ -59,3 +59,15 @@
     height: 44px;
   }
 }
+
+
+.submenu {
+    background: rgba(7, 7, 7, 0.58);
+    backdrop-filter: blur(10px) saturate(125%);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+}
+
+.submenu-link:hover,
+.submenu-link.active {
+    background: rgba(217, 192, 127, 0.1);
+}

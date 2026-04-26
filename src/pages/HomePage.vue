@@ -239,6 +239,44 @@ onBeforeUnmount(() => {
           <button class="gallery-arrow next" type="button" @click="nextGallery">&#10095;</button>
         </div>
       </section>
+
+      <section class="section newsletter-section reveal-item" id="newsletter">
+        <div class="newsletter-wrap">
+          <div class="newsletter-ornament" aria-hidden="true"></div>
+          <h2 class="newsletter-title">{{ locale === 'en' ? 'STAY INFORMED!' : 'БУДЬТЕ В КУРСЕ ВСЕГО!' }}</h2>
+          <p class="newsletter-subtitle">
+            {{
+              locale === 'en'
+                ? 'Subscribe to updates and get fresh Witcher news first.'
+                : 'Подпишитесь на рассылку и получайте свежие ведьмачьи новости первыми.'
+            }}
+          </p>
+
+          <form class="newsletter-form" @submit.prevent>
+            <input
+              type="email"
+              class="newsletter-input"
+              :placeholder="locale === 'en' ? 'your@email.com' : 'ваш@email.ru'"
+            >
+
+            <label class="newsletter-check">
+              <input type="checkbox">
+              <span>
+                {{
+                  locale === 'en'
+                    ? 'I agree to receive updates and special offers.'
+                    : 'Я согласен получать новости и специальные предложения.'
+                }}
+              </span>
+            </label>
+
+            <button type="submit" class="newsletter-btn">
+              {{ locale === 'en' ? 'SUBSCRIBE' : 'ПОДПИСАТЬСЯ' }}
+            </button>
+          </form>
+          <div class="newsletter-ornament bottom" aria-hidden="true"></div>
+        </div>
+      </section>
     </main>
 
     <AppFooter />
@@ -254,6 +292,142 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.newsletter-section {
+  margin-top: 28px;
+}
+
+.newsletter-wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 46px 28px 40px;
+  border: 1px solid rgba(217, 192, 127, 0.35);
+  background:
+    linear-gradient(180deg, rgba(6, 6, 6, 0.78), rgba(5, 5, 5, 0.92)),
+    url('/assets/fon.jpg') center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(217, 192, 127, 0.1), 0 18px 34px rgba(0, 0, 0, 0.44);
+  transition: box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.newsletter-wrap:hover {
+  border-color: rgba(217, 192, 127, 0.65);
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 192, 127, 0.22),
+    0 0 30px rgba(217, 192, 127, 0.18),
+    0 24px 42px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter-ornament {
+  width: min(420px, 76%);
+  height: 16px;
+  margin: 0 auto 16px;
+  position: relative;
+  border-top: 1px solid rgba(217, 192, 127, 0.62);
+}
+
+.newsletter-ornament::before,
+.newsletter-ornament::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(217, 192, 127, 0.72);
+  transform: rotate(45deg);
+  background: rgba(5, 5, 5, 0.72);
+}
+
+.newsletter-ornament::before {
+  left: -4px;
+}
+
+.newsletter-ornament::after {
+  right: -4px;
+}
+
+.newsletter-ornament.bottom {
+  margin: 24px auto 0;
+}
+
+.newsletter-title {
+  margin: 0;
+  text-align: center;
+  font-family: "Forum", serif;
+  font-size: clamp(34px, 4.2vw, 54px);
+  letter-spacing: 4px;
+  color: #e9d39a;
+}
+
+.newsletter-subtitle {
+  margin: 10px auto 22px;
+  max-width: 680px;
+  text-align: center;
+  color: #e5cb8f;
+  font-size: clamp(21px, 2.2vw, 29px);
+  line-height: 1.25;
+}
+
+.newsletter-form {
+  display: grid;
+  gap: 14px;
+}
+
+.newsletter-input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(217, 192, 127, 0.64);
+  background: rgba(5, 5, 5, 0.72);
+  color: #f0ddb2;
+  padding: 0 16px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  transition: box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.newsletter-input:focus,
+.newsletter-input:hover {
+  outline: none;
+  border-color: #e5cb8f;
+  box-shadow: 0 0 22px rgba(229, 203, 143, 0.28);
+}
+
+.newsletter-check {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: start;
+  gap: 10px;
+  color: #d8c08a;
+  font-size: clamp(17px, 1.3vw, 22px);
+}
+
+.newsletter-check input {
+  margin-top: 4px;
+  accent-color: #d9c07f;
+}
+
+.newsletter-btn {
+  justify-self: center;
+  min-width: 260px;
+  height: 56px;
+  border: 1px solid rgba(217, 192, 127, 0.76);
+  background: rgba(8, 8, 8, 0.76);
+  color: #e9d39a;
+  font-family: "Forum", serif;
+  font-size: clamp(23px, 2vw, 30px);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: box-shadow 0.24s ease, border-color 0.24s ease, transform 0.22s ease;
+}
+
+.newsletter-btn:hover {
+  border-color: #efd9a5;
+  box-shadow: 0 0 24px rgba(239, 217, 165, 0.28);
+  transform: translateY(-1px);
+}
+
+.newsletter-btn:active {
+  transform: translateY(0);
+}
+
 .hero-slide {
   opacity: 1;
   transform: translate3d(0, 0, 0);
@@ -281,5 +455,21 @@ onBeforeUnmount(() => {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
   filter: blur(0) !important;
+}
+
+@media (max-width: 760px) {
+  .newsletter-wrap {
+    padding: 30px 16px 26px;
+  }
+
+  .newsletter-input {
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .newsletter-btn {
+    min-width: 220px;
+    height: 50px;
+  }
 }
 </style>
