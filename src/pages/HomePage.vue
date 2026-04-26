@@ -192,13 +192,17 @@ onBeforeUnmount(() => {
             </div>
           </div>
 
-          <article class="slide active">
-            <img :src="activeHeroSlide.image" :alt="activeHeroSlide.name[locale]">
-            <div class="slide-body">
-              <h3>{{ activeHeroSlide.name[locale] }}</h3>
-              <p>{{ activeHeroSlide.text[locale] }}</p>
-            </div>
-          </article>
+          <div class="slides">
+            <Transition name="hero-switch" mode="out-in">
+              <article :key="activeHeroSlide.id" class="slide hero-slide">
+                <img :src="activeHeroSlide.image" :alt="activeHeroSlide.name[locale]">
+                <div class="slide-body">
+                  <h3>{{ activeHeroSlide.name[locale] }}</h3>
+                  <p>{{ activeHeroSlide.text[locale] }}</p>
+                </div>
+              </article>
+            </Transition>
+          </div>
         </div>
       </section>
 
@@ -247,3 +251,34 @@ onBeforeUnmount(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.hero-slide {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+.hero-switch-enter-active,
+.hero-switch-leave-active {
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s cubic-bezier(0.2, 0.85, 0.2, 1),
+    filter 0.45s ease;
+}
+
+.hero-switch-enter-from,
+.hero-switch-leave-to {
+  opacity: 0 !important;
+  transform: translate3d(34px, 0, 0) scale(0.992) !important;
+  filter: blur(2px) !important;
+}
+
+.hero-switch-enter-to,
+.hero-switch-leave-from {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  filter: blur(0) !important;
+}
+</style>

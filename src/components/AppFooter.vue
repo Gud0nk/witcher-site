@@ -40,7 +40,7 @@ const { t } = useLocale()
         <a href="#">{{ t('privacy') }}</a>
         <a href="#">{{ t('career') }}</a>
         <a href="#">User Agreement</a>
-        <a href="#">Fan Content Guidelines</a>
+        <a href="#">Content Guidelines</a>
         <a href="#">Cookie</a>
       </div>
 
@@ -50,7 +50,7 @@ const { t } = useLocale()
         </div>
         <p class="footer-copy">{{ t('footerCopy') }}</p>
         <div class="footer-game">
-          <img src="/assets/logotype.png" alt="Ведьмак 3: Дикая Охота">
+          <img src="../../public/assets/logotype.png" alt="Ведьмак 3: Дикая Охота">
         </div>
       </div>
     </div>

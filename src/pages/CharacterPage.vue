@@ -46,7 +46,7 @@ useReveal('.characters-page .reveal-item')
 
       <p v-if="!filteredGroups.length" class="no-results" style="display:block;">{{ t('noResults') }}</p>
 
-      <section v-for="group in filteredGroups" :key="group.title" class="group reveal-item">
+      <section v-for="group in filteredGroups" :key="group.title" class="group">
         <h2>{{ group.title }}</h2>
         <div class="grid">
           <article v-for="character in group.items" :key="character.name" class="card">

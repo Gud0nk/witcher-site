@@ -139,7 +139,7 @@ main {
 .submenu {
     position: absolute;
     right: 0;
-    top: calc(100% + 8px);
+    top: 100%;
     min-width: 240px;
     background: #090909;
     border: 1px solid #2b2b2b;
