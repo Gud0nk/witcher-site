@@ -14,12 +14,6 @@
                       ],
     "monsters":  [
                      {
-                         "name":  "Бестия из Боклера",
-                         "group":  "Бестии",
-                         "image":  "./assets/besteari/bestia_in_bokler.webp",
-                         "description":  "Редкий хищник Туссента, нападающий стремительно и без предупреждения."
-                     },
-                     {
                          "name":  "Большой злой волк",
                          "group":  "Бестии",
                          "image":  "./assets/besteari/big_angry_volk.webp",
@@ -436,49 +430,49 @@
                      {
                          "name":  "Голем Моро",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/golem-moro.webp",
+                         "image":  "./assets/besteari/golem-moro.png",
                          "description":  "В записях ведьмаков это дух силы по имени «Голем Моро», которого чаще встречают в местах силы. Наказывает за жадные атаки и ошибки в позиции."
                      },
                      {
                          "name":  "Гончая Дикой Охоты",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/gonchaya.webp",
                          "description":  "В записях ведьмаков это магический элементаль по имени «Гончая Дикой Охоты», которого чаще встречают у древних руин. Лучше всего его сдерживают терпение и точный тайминг."
                      },
                      {
                          "name":  "Медоносный призрак",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/medghost.webp",
                          "description":  "По бестиарию это дух силы по имени «Медоносный призрак», которого чаще встречают в местах силы. Опаснее всего в затяжной драке без контроля дистанции."
                      },
                      {
                          "name":  "Джинн",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/djin.webp",
                          "description":  "Существо чистой магии воздуха, опасное внезапными выбросами силы."
                      },
                      {
                          "name":  "Фея",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/feya.webp",
                          "description":  "По бестиарию это дух силы по имени «Фея», которого чаще встречают у древних руин. Наказывает за жадные атаки и ошибки в позиции."
                      },
                      {
                          "name":  "Элементаль Земли",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/elemental.webp",
                          "description":  "Перед вами дух силы по имени «Элементаль Земли», которого чаще встречают в местах силы. Становится особенно опасен, когда задает свой ритм."
                      },
                      {
                          "name":  "Феразин",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/ferazin.webp",
                          "description":  "По бестиарию это дух силы по имени «Феразин», которого чаще встречают у древних руин. Любит навязывать ближний бой и ломать темп схватки."
                      },
                      {
                          "name":  "Элементаль Огня",
                          "group":  "Духи стихий",
-                         "image":  "./assets/besteari/morok.webp",
+                         "image":  "./assets/besteari/elemental-fire.webp",
                          "description":  "По бестиарию это стихийная сущность по имени «Элементаль Огня», которого чаще встречают у древних руин. Любит навязывать ближний бой и ломать темп схватки."
                      },
                      {
