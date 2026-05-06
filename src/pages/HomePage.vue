@@ -11,6 +11,11 @@ const { gallerySets, heroSlides } = galleryData
 
 const activeHero = ref(0)
 const heroTimer = ref(null)
+const isHeroDragging = ref(false)
+const heroDragStartX = ref(0)
+const heroDragDeltaX = ref(0)
+const heroDragPointerId = ref(null)
+const heroDragSwitchLock = ref(false)
 
 const activeGallery = ref('screenshots')
 const galleryIndex = ref(0)
@@ -31,6 +36,19 @@ const trackStyle = computed(() => ({
   transform: `translate3d(-${galleryIndex.value * galleryStep.value}px, 0, 0)`
 }))
 
+const heroDragCardStyle = computed(() => {
+  if (!isHeroDragging.value) {
+    return {}
+  }
+
+  const max = 110
+  const clamped = Math.max(-max, Math.min(max, heroDragDeltaX.value * 0.42))
+  return {
+    transform: `translate3d(${clamped}px, 0, 0)`,
+    transition: 'none'
+  }
+})
+
 const lightboxCurrent = computed(() => lightboxItems.value[lightboxIndex.value] || null)
 
 const setHero = (index) => {
@@ -39,6 +57,10 @@ const setHero = (index) => {
 
 const nextHero = () => {
   activeHero.value = (activeHero.value + 1) % heroSlides.length
+}
+
+const prevHero = () => {
+  activeHero.value = (activeHero.value - 1 + heroSlides.length) % heroSlides.length
 }
 
 const startHeroAuto = () => {
@@ -51,6 +73,76 @@ const stopHeroAuto = () => {
     window.clearInterval(heroTimer.value)
     heroTimer.value = null
   }
+}
+
+const onHeroPointerDown = (event) => {
+  if (event.pointerType === 'mouse' && event.button !== 0) {
+    return
+  }
+
+  stopHeroAuto()
+  isHeroDragging.value = true
+  heroDragStartX.value = event.clientX
+  heroDragDeltaX.value = 0
+  heroDragPointerId.value = event.pointerId
+  event.currentTarget?.setPointerCapture?.(event.pointerId)
+}
+
+const onHeroPointerMove = (event) => {
+  if (!isHeroDragging.value || heroDragPointerId.value !== event.pointerId) {
+    return
+  }
+  event.preventDefault()
+  heroDragDeltaX.value = event.clientX - heroDragStartX.value
+
+  if (heroDragSwitchLock.value) {
+    return
+  }
+
+  const dragThreshold = 130
+  if (heroDragDeltaX.value <= -dragThreshold) {
+    heroDragSwitchLock.value = true
+    nextHero()
+    heroDragStartX.value = event.clientX
+    heroDragDeltaX.value = 0
+    window.setTimeout(() => {
+      heroDragSwitchLock.value = false
+    }, 220)
+  } else if (heroDragDeltaX.value >= dragThreshold) {
+    heroDragSwitchLock.value = true
+    prevHero()
+    heroDragStartX.value = event.clientX
+    heroDragDeltaX.value = 0
+    window.setTimeout(() => {
+      heroDragSwitchLock.value = false
+    }, 220)
+  }
+}
+
+const onHeroPointerUp = (event) => {
+  if (!isHeroDragging.value || heroDragPointerId.value !== event.pointerId) {
+    return
+  }
+
+  isHeroDragging.value = false
+  heroDragStartX.value = 0
+  heroDragDeltaX.value = 0
+  heroDragPointerId.value = null
+  heroDragSwitchLock.value = false
+  event.currentTarget?.releasePointerCapture?.(event.pointerId)
+  startHeroAuto()
+}
+
+const onHeroPointerCancel = (event) => {
+  if (heroDragPointerId.value !== event.pointerId) {
+    return
+  }
+  isHeroDragging.value = false
+  heroDragStartX.value = 0
+  heroDragDeltaX.value = 0
+  heroDragPointerId.value = null
+  heroDragSwitchLock.value = false
+  startHeroAuto()
 }
 
 const updateGalleryLayout = () => {
@@ -158,14 +250,14 @@ onBeforeUnmount(() => {
     <main>
       <section class="hero">
         <div class="hero-media">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop playsinline preload="metadata">
             <source src="/assets/video/videoWitcher.mp4" type="video/mp4">
           </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal-item">
           <p class="kicker">CD PROJEKT RED</p>
-          <img class="hero-logo" src="/assets/logotype.png" alt="Ведьмак 3: Дикая Охота">
+          <img class="hero-logo" src="/assets/logotype.png" alt="Ведьмак 3: Дикая Охота" decoding="async" fetchpriority="high">
           <p>{{ t('heroSubtitle') }}</p>
         </div>
       </section>
@@ -193,10 +285,18 @@ onBeforeUnmount(() => {
             </div>
           </div>
 
-          <div class="slides">
-            <Transition name="hero-switch" mode="out-in">
-              <article :key="activeHeroSlide.id" class="slide hero-slide">
-                <img :src="activeHeroSlide.image" :alt="activeHeroSlide.name[locale]">
+          <div
+            class="slides"
+            :class="{ dragging: isHeroDragging }"
+            @pointerdown="onHeroPointerDown"
+            @pointermove="onHeroPointerMove"
+            @pointerup="onHeroPointerUp"
+            @pointercancel="onHeroPointerCancel"
+            @pointerleave="onHeroPointerUp"
+          >
+            <Transition name="hero-switch">
+              <article :key="activeHeroSlide.id" class="slide hero-slide" :style="heroDragCardStyle">
+                <img :src="activeHeroSlide.image" :alt="activeHeroSlide.name[locale]" draggable="false" loading="eager" decoding="async" fetchpriority="high" @dragstart.prevent>
                 <div class="slide-body">
                   <h3>{{ activeHeroSlide.name[locale] }}</h3>
                   <p>{{ activeHeroSlide.text[locale] }}</p>
@@ -231,7 +331,7 @@ onBeforeUnmount(() => {
                   <a class="gallery-video-link" :href="item.link" target="_blank" rel="noopener noreferrer">{{ t('openVideo') }}</a>
                 </template>
                 <template v-else>
-                  <img :src="item.src" :alt="item.alt[locale]" @click="openLightbox(item)">
+                  <img :src="item.src" :alt="item.alt[locale]" loading="lazy" decoding="async" @click="openLightbox(item)">
                 </template>
               </article>
             </div>
@@ -256,7 +356,7 @@ onBeforeUnmount(() => {
             <input
               type="email"
               class="newsletter-input"
-              :placeholder="locale === 'en' ? 'your@email.com' : 'ваш@email.ru'"
+              :placeholder="locale === 'en' ? 'Enter your email' : 'Введите электронную почту'"
             >
 
             <label class="newsletter-check">
@@ -390,18 +490,47 @@ onBeforeUnmount(() => {
   box-shadow: 0 0 22px rgba(229, 203, 143, 0.28);
 }
 
+.newsletter-input::placeholder {
+  color: #d9c07f;
+  opacity: 0.8;
+}
+
 .newsletter-check {
   display: grid;
   grid-template-columns: 20px 1fr;
   align-items: start;
   gap: 10px;
-  color: #d8c08a;
+  color: #9a9a9a;
   font-size: clamp(17px, 1.3vw, 22px);
 }
 
 .newsletter-check input {
   margin-top: 4px;
-  accent-color: #d9c07f;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(217, 192, 127, 0.75);
+  background: #070707;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  position: relative;
+}
+
+.newsletter-check input:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #d9c07f;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.newsletter-check input:hover {
+  box-shadow: 0 0 8px rgba(217, 192, 127, 0.28), inset 0 0 0 1px rgba(0, 0, 0, 0.7);
 }
 
 .newsletter-btn {
@@ -428,6 +557,21 @@ onBeforeUnmount(() => {
   transform: translateY(0);
 }
 
+.slides {
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slides.dragging {
+  cursor: grabbing;
+}
+
+.slides img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 .hero-slide {
   opacity: 1;
   transform: translate3d(0, 0, 0);
@@ -438,9 +582,9 @@ onBeforeUnmount(() => {
 .hero-switch-enter-active,
 .hero-switch-leave-active {
   transition:
-    opacity 0.55s ease,
-    transform 0.55s cubic-bezier(0.2, 0.85, 0.2, 1),
-    filter 0.45s ease;
+    opacity 0.38s ease,
+    transform 0.44s cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 0.35s ease;
 }
 
 .hero-switch-enter-from,
@@ -473,3 +617,7 @@ onBeforeUnmount(() => {
   }
 }
 </style>
+
+
+
+

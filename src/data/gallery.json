@@ -10,7 +10,7 @@
         "ru": "Геральт",
         "en": "Geralt"
       },
-      "image": "./assets/real/geralt.jpg",
+      "image": "./assets/real/geralt.png",
       "text": {
         "ru": "Ведьмак школы Волка, легендарный охотник на чудовищ. Путешествует по Континенту в поисках Цири и защищает людей от угроз Дикой Охоты.",
         "en": "A Wolf School witcher and legendary monster slayer. He travels across the Continent in search of Ciri and protects people from the Wild Hunt."
@@ -26,7 +26,7 @@
         "ru": "Цири",
         "en": "Ciri"
       },
-      "image": "./assets/real/ciri.webp",
+      "image": "./assets/real/ciri.jpg",
       "text": {
         "ru": "Наследница Старшей Крови и приемная дочь Геральта. Ее способности перемещаться между мирами делают ее ключом к судьбе всего мира.",
         "en": "Heiress of the Elder Blood and Geralt's adopted daughter. Her world-hopping powers make her key to the fate of the entire world."
@@ -58,7 +58,7 @@
         "ru": "Трисс",
         "en": "Triss"
       },
-      "image": "./assets/real/triss.jpg",
+      "image": "./assets/real/triss.png",
       "text": {
         "ru": "Талантливая чародейка и верный союзник Геральта. В Новиграде спасает магов от преследований и помогает в решающих сражениях.",
         "en": "A talented sorceress and trusted ally of Geralt. In Novigrad she helps persecuted mages and supports decisive battles."
