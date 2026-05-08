@@ -60,7 +60,7 @@ const dict = {
     terms: 'Условия использования',
     privacy: 'Политика конфиденциальности',
     career: 'Карьера',
-    footerCopy: '© 2026 Фан-сайт по The Witcher 3: Wild Hunt. Все права на игровые материалы, персонажей, логотипы и контент принадлежат CD PROJEKT RED.'
+    footerCopy: '© 2026 Сайт по The Witcher 3: Wild Hunt. Все права на игровые материалы, персонажей, логотипы и контент принадлежат CD PROJEKT RED.'
   },
   en: {
     home: 'Home',
