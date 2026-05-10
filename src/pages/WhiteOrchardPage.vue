@@ -157,6 +157,7 @@ useReveal('.white-orchard-page .reveal-item')
 }
 
 .orchard-card-lore {
+  background: url("../../public/assets/background-lor/white-sad.png") no-repeat center center fixed;
   cursor: pointer;
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
