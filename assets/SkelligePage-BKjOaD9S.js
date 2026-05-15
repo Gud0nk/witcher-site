@@ -1,0 +1,1 @@
+import{M as e,T as t,_ as n}from"./_plugin-vue_export-helper-B8sW-wfH.js";import{t as r}from"./RegionMapPage-D9Gc9Sx3.js";import{t as i}from"./regions-B_IvOzYd.js";var a={__name:`SkelligePage`,setup(a){let{regions:o}=i;return(i,a)=>(t(),n(r,{region:e(o).skellige},null,8,[`region`]))}};export{a as default};

@@ -1,1 +1,0 @@
-import{j as e,m as t,w as n}from"./AppFooter-Bxav1mxZ.js";import{t as r}from"./RegionMapPage-CsSnMS3-.js";import{t as i}from"./regions-BtuBD8JJ.js";var a={__name:`VelenPage`,setup(a){let{regions:o}=i;return(i,a)=>(n(),t(r,{region:e(o).velen},null,8,[`region`]))}};export{a as default};
