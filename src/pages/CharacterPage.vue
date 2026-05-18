@@ -1,5 +1,6 @@
 ﻿<script setup>
 import { computed, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
 import charactersData from '../data/characters.json'
@@ -10,6 +11,12 @@ const { characterGroups } = charactersData
 const query = ref('')
 const selectedGroup = ref('all')
 const { t, locale } = useLocale()
+
+const getCharacterId = (item, groupIndex, itemIndex) => {
+  const fromImage = item.image?.split('/').pop()?.split('.')[0]
+  if (fromImage) return fromImage.toLowerCase()
+  return `char-${groupIndex}-${itemIndex}`
+}
 
 const alliesItemsEn = {
   'Весемир': { name: 'Vesemir', description: "The oldest witcher of Kaer Morhen and Geralt's mentor." },
@@ -78,19 +85,15 @@ const enByRuTitle = {
 }
 
 const localizedGroups = computed(() =>
-  characterGroups.map((group) => {
-    if (locale.value !== 'en') {
-      return group
-    }
-
+  characterGroups.map((group, groupIndex) => {
     const enGroup = enByRuTitle[group.title]
     return {
-      ...group,
-      title: enGroup?.title || group.title,
-      items: group.items.map((item) => {
-        const translated = enGroup?.items?.[item.name]
+      title: locale.value === 'en' ? enGroup?.title || group.title : group.title,
+      items: group.items.map((item, itemIndex) => {
+        const translated = locale.value === 'en' ? enGroup?.items?.[item.name] : null
         return {
           ...item,
+          id: getCharacterId(item, groupIndex, itemIndex),
           name: translated?.name || item.name,
           description: translated?.description || item.description
         }
@@ -137,14 +140,28 @@ useReveal('.characters-page .reveal-item')
       <section v-for="group in filteredGroups" :key="group.title" class="group">
         <h2>{{ group.title }}</h2>
         <div class="grid character-grid" :class="{ 'single-result': group.items.length === 1 }">
-          <article v-for="character in group.items" :key="character.name" class="card">
+          <RouterLink v-for="character in group.items" :key="character.id" :to="`/characters/${character.id}`" class="card card-link">
             <img :src="character.image" :alt="character.name">
             <h3>{{ character.name }}</h3>
             <p>{{ character.description }}</p>
-          </article>
+          </RouterLink>
         </div>
       </section>
     </main>
     <AppFooter />
   </div>
 </template>
+
+<style scoped>
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 148, 69, 0.7);
+}
+</style>

@@ -1,12 +1,14 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+﻿import { createRouter, createWebHashHistory } from 'vue-router'
 
 import HomePage from '../pages/HomePage.vue'
 import MonstersPage from '../pages/MonstersPage.vue'
 import CharacterPage from '../pages/CharacterPage.vue'
+import CharacterDetailsPage from '../pages/CharacterDetailsPage.vue'
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/characters', component: CharacterPage },
+    { path: '/characters/:id', component: CharacterDetailsPage },
     { path: '/monsters', component: MonstersPage },
     { path: '/velen', component: () => import('../pages/VelenPage.vue') },
     { path: '/skellige', component: () => import('../pages/SkelligePage.vue') },

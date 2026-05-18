@@ -1,0 +1,115 @@
+﻿{
+  "groupTitlesEn": {
+    "Основные герои": "Main Heroes",
+    "Друзья и союзники": "Allies and Friends",
+    "Союзники и друзья": "Allies and Friends",
+    "Скеллиге": "Skellige",
+    "Новиград и Оксенфурт": "Novigrad and Oxenfurt",
+    "Нильфгаард и чародеи": "Nilfgaard and Sorcerers",
+    "Антагонисты": "Antagonists"
+  },
+  "charactersEn": {
+    "Геральт из Ривии": { "name": "Geralt of Rivia", "description": "A Wolf School witcher, legendary monster hunter and the central hero of the game." },
+    "Цири": { "name": "Ciri", "description": "Child of the Elder Blood, hunted by the Wild Hunt." },
+    "Йеннифэр": { "name": "Yennefer", "description": "A powerful sorceress and key ally in the search for Ciri." },
+    "Трисс Меригольд": { "name": "Triss Merigold", "description": "A sorceress and diplomat who protects mages in Novigrad." },
+    "Весемир": { "name": "Vesemir", "description": "The oldest witcher of Kaer Morhen and Geralt's mentor." },
+    "Лютик": { "name": "Dandelion", "description": "Poet and Geralt's best friend, often finding trouble." },
+    "Лютик (Данделион)": { "name": "Dandelion", "description": "Poet and Geralt's best friend, often finding trouble." },
+    "Золтан Хивай": { "name": "Zoltan Chivay", "description": "A dwarven warrior and loyal ally of the witcher." },
+    "Вернон Роше": { "name": "Vernon Roche", "description": "Temerian officer, leader of the Blue Stripes and a master of sabotage." },
+    "Роше Вернон": { "name": "Vernon Roche", "description": "Temerian officer, leader of the Blue Stripes and a master of sabotage." },
+    "Кейра Мец": { "name": "Keira Metz", "description": "A sorceress who helps Geralt investigate magical secrets of Velen." },
+    "Мышовур": { "name": "Mousesack", "description": "A Skellige druid and keeper of ancient knowledge." },
+    "Крах ан Крайт": { "name": "Crach an Craite", "description": "Jarl of Clan an Craite and an old friend of Geralt." },
+    "Хьялмар": { "name": "Hjalmar", "description": "Crach's son and a claimant to the Skellige throne." },
+    "Керис ан Крайт": { "name": "Cerys an Craite", "description": "Crach's sharp-minded daughter and a strong candidate for the crown." },
+    "Сванриге": { "name": "Svanrige", "description": "A claimant to power who favors centralized rule." },
+    "Удальрик": { "name": "Udalryk", "description": "Jarl of Clan Brokvar, tormented by a curse." },
+    "Сигизмунд Дийкстра": { "name": "Sigismund Dijkstra", "description": "Former Redanian spymaster, master of intrigue and manipulation." },
+    "Сиги Рувен (Дийкстра)": { "name": "Sigismund Dijkstra", "description": "Former Redanian spymaster, master of intrigue and manipulation." },
+    "Радовид V": { "name": "Radovid V", "description": "King of Redania leading a ruthless hunt for mages." },
+    "Присцилла": { "name": "Priscilla", "description": "A singer and Dandelion's beloved, one of Novigrad's bright stars." },
+    "Шани": { "name": "Shani", "description": "A medic and an old acquaintance of Geralt." },
+    "Барт": { "name": "Bart", "description": "Treasury troll guard, one of Novigrad's most memorable characters." },
+    "Эмгыр вар Эмрейс": { "name": "Emhyr var Emreis", "description": "Emperor of Nilfgaard, Ciri's father and a key political player." },
+    "Морвран Воорхис": { "name": "Morvran Voorhis", "description": "A high-ranking imperial general and representative of the court." },
+    "Филиппа Эйльхарт": { "name": "Philippa Eilhart", "description": "An influential sorceress and experienced political schemer." },
+    "Маргарита Ло-Антиль": { "name": "Margarita Laux-Antille", "description": "A sorceress and former rector of Aretuza." },
+    "Фрингилья Виго": { "name": "Fringilla Vigo", "description": "A Nilfgaardian mage involved in Blood and Wine events." },
+    "Эредин": { "name": "Eredin", "description": "King of the Wild Hunt, the main enemy in the core campaign." },
+    "Имлерих": { "name": "Imlerith", "description": "One of the Wild Hunt's generals, a brutal warrior." },
+    "Карантир": { "name": "Caranthir", "description": "A Wild Hunt mage wielding destructive ice magic." },
+    "Гюнтер о'Дим": { "name": "Gaunter O'Dimm", "description": "A mysterious entity known as the Man of Glass." },
+    "Детлафф ван дер Эретайн": { "name": "Dettlaff van der Eretein", "description": "A higher vampire and tragic antagonist of Blood and Wine." }
+  },
+  "fullDescription": {
+    "ru": "{name} — один из важных персонажей The Witcher 3.",
+    "en": "{name} is one of the key figures in The Witcher 3."
+  },
+  "wikiById": {
+    "geralt": {
+      "hero": {
+        "bg": "/assets/background-wiki/Geralt/fon1.png",
+        "tabs": ["ВЕДЬМАК 3: ДИКАЯ ОХОТА", "ВЕДЬМАК 2: УБИЙЦЫ КОРОЛЕЙ", "ВЕДЬМАК 1"],
+        "image": "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 3.png",
+        "ruParagraphs": [
+          "Геральт из Ривии, прозванный Белым Волком, — главный герой серии и один из лучших фехтовальщиков Севера. Ведьмак школы Волка, профессиональный охотник на чудовищ, герой сказаний и легенда королевских дворов.",
+          "Его путь проходит через войны, интриги и древние проклятия. Среди ближайших ему людей — Йеннифэр, Трисс, Лютик и верные соратники, с которыми он формирует собственную «ганзу»."
+        ],
+        "enParagraphs": [
+          "Geralt of Rivia, known as the White Wolf, is the central hero of the saga and one of the North's finest swordsmen. A Wolf School witcher and a professional monster hunter, he is a living legend across the kingdoms.",
+          "His journey runs through wars, intrigue, and ancient curses. Among those closest to him are Yennefer, Triss, Dandelion, and loyal companions who become his own fellowship."
+        ]
+      },
+      "sections": [
+        {
+          "bg": "/assets/background-wiki/Geralt/fon2.png",
+          "titleRu": "Характер",
+          "titleEn": "Character",
+          "textRu": "Геральт сдержан, ироничен и следует собственному кодексу. За внешней холодностью скрывается готовность защищать слабых и верность близким.",
+          "textEn": "Geralt is restrained, ironic, and follows his own code. Behind his cold image stands loyalty and readiness to protect the weak."
+        },
+        {
+          "bg": "/assets/background-wiki/Geralt/fon3.png",
+          "titleRu": "Внешность",
+          "titleEn": "Appearance",
+          "textRu": "Белые волосы, шрамы, «кошачьи» глаза и медальон Школы Волка — его узнаваемые черты.",
+          "textEn": "White hair, scars, cat eyes, and the Wolf School medallion are his signature traits.",
+          "image": "/assets/background-wiki/Geralt/shram.png"
+        },
+        {
+          "bg": "/assets/background-wiki/Geralt/fon4.png",
+          "titleRu": "Приключения",
+          "titleEn": "Adventures",
+          "textRu": "Его путь проходит через охваченные войной земли, политические интриги, проклятые болота и вампирские тайны Туссента.",
+          "textEn": "His path goes through war-torn lands, politics, cursed swamps, and vampire secrets of Toussaint."
+        }
+      ],
+      "signs": {
+        "bg": "/assets/background-wiki/Geralt/fon5.png",
+        "titleRu": "Ведьмачьи знаки",
+        "titleEn": "Witcher Signs",
+        "icons": [
+          "/assets/background-wiki/Geralt/aard.png",
+          "/assets/background-wiki/Geralt/irden.png",
+          "/assets/background-wiki/Geralt/igni.png",
+          "/assets/background-wiki/Geralt/axi.png",
+          "/assets/background-wiki/Geralt/qwen.png"
+        ]
+      },
+      "video": "/assets/background-wiki/Geralt/fon6.mp4",
+      "gallery": {
+        "titleRu": "Галерея",
+        "titleEn": "Gallery",
+        "images": [
+          "/assets/background-wiki/Geralt/WITCHER1.png",
+          "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 2.png",
+          "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 3.png"
+        ]
+      }
+    }
+  }
+}
+
+
