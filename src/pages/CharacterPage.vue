@@ -6,6 +6,8 @@ import AppFooter from '../components/AppFooter.vue'
 import charactersData from '../data/characters.json'
 import { useLocale } from '../composables/useLocale'
 import { useReveal } from '../composables/useUiEffects'
+import { useRouter } from 'vue-router'
+import router from "../router/index.js";
 
 const { characterGroups } = charactersData
 const query = ref('')
@@ -114,6 +116,11 @@ const filteredGroups = computed(() =>
     .filter((group) => group.items.length > 0)
 )
 
+const getCharacterRoute = (character) => {
+  // ID генерируется из имени картинки: geralt.jpg → 'geralt'
+  if (character.id === 'geralt') return '/wiki/geralt'
+  return `/characters/${character.id}`
+}
 useReveal('.characters-page .reveal-item')
 </script>
 

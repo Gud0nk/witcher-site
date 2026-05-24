@@ -123,8 +123,7 @@ const isWikiMode = computed(() => Boolean(character.value && wiki.value))
 .sheet-block::before { content:''; position:absolute; inset:0; background:rgba(6,6,6,.68); }
 .sheet-block > * { position:relative; z-index:1; }
 .hero { min-height: 620px; padding: 16px 24px 24px; }
-.hero-tabs
--copy { align-self: start; padding-top: 6px; }
+.hero-tabs-copy { align-self: start; padding-top: 6px; }
 .hero-copy p { margin: 0 0 12px; color: #eadabc; font-size: clamp(17px, 1.22vw, 24px); line-height: 1.33; text-shadow: 0 1px 2px rgba(0, 0, 0, .7); }
 .sheet-block h2 { margin:0 0 10px; font-family:'Forum',serif; color:#efdfb5; font-size:40px; }
 .sheet-block p { margin:0; color:#e2cc93; line-height:1.38; font-size:29px; }
