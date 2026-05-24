@@ -1,0 +1,1 @@
+import{D as e,P as t,_ as n}from"./_plugin-vue_export-helper-MhxoFWb0.js";import{t as r}from"./RegionMapPage-DDServWw.js";import{t as i}from"./regions-BtuBD8JJ.js";var a={__name:`VelenPage`,setup(a){let{regions:o}=i;return(i,a)=>(e(),n(r,{region:t(o).velen},null,8,[`region`]))}};export{a as default};

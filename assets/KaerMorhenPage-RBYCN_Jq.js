@@ -1,1 +1,0 @@
-import{D as e,P as t,y as n}from"./_plugin-vue_export-helper-tq_zpA-Y.js";import{t as r}from"./RegionMapPage-DKBz-K3F.js";import{t as i}from"./regions-B_IvOzYd.js";var a={__name:`KaerMorhenPage`,setup(a){let{regions:o}=i;return(i,a)=>(e(),n(r,{region:t(o).kaerMorhen},null,8,[`region`]))}};export{a as default};
