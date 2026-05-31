@@ -49,13 +49,22 @@
   },
   "wikiById": {
     "geralt": {
+      "layout": {
+        "hero": { "display": "grid", "columns": "1fr 2fr", "minHeight": "620px", "gap": "20px", "alignItems": "center" },
+        "signs": { "display": "flex", "gap": "24px", "wrap": true, "iconSize": "52px" },
+        "gallery": { "columns": 3, "gap": "10px", "height": "140px" }
+      },
       "hero": {
         "bg": "/assets/background-wiki/Geralt/fon1.png",
-        "tabs": ["ВЕДЬМАК 3: ДИКАЯ ОХОТА", "ВЕДЬМАК 2: УБИЙЦЫ КОРОЛЕЙ", "ВЕДЬМАК 1"],
-        "image": "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 3.png",
+        "tabs": [
+          { "name": "ВЕДЬМАК 3: ДИКАЯ ОХОТА", "image": "/assets/background-wiki/Geralt/WITCHER3.png" },
+          { "name": "ВЕДЬМАК 2: УБИЙЦЫ КОРОЛЕЙ", "image": "/assets/background-wiki/Geralt/WITCHER2.png" },
+          { "name": "ВЕДЬМАК 1", "image": "/assets/background-wiki/Geralt/WITCHER1.png" }
+        ],
+        "image": "public/assets/background-wiki/Geralt/WITCHER3.png",
         "ruParagraphs": [
-          "Геральт из Ривии, прозванный Белым Волком, — главный герой серии и один из лучших фехтовальщиков Севера. Ведьмак школы Волка, профессиональный охотник на чудовищ, герой сказаний и легенда королевских дворов.",
-          "Его путь проходит через войны, интриги и древние проклятия. Среди ближайших ему людей — Йеннифэр, Трисс, Лютик и верные соратники, с которыми он формирует собственную «ганзу»."
+          "Геральт из Ривии, прозванный Белым Волком и Мясником из Блавикена, — главный герой литературной саги и комиксов, а также протагонист последующих компьютерных игр, Ведьмак из Школы Волка, профессиональный охотник на чудовищ, один из лучших фехтовальщиковСевера, герой сказаний и легенд и невольный телохранитель королей.",
+          "Имеет романтический интерес к двум чародейкам: Йеннифер из Венгерберга и Трисс Меригольд. Его лучшими друзьями помимо ведьмаков из своей школы являются бард по имени Лютик, краснолюд Золтан Хивай и высший вампир Эмиель Регис, а в ходе странствия во время Второй Северной войны вокруг Белого Волка образовалась компания товарищей, именовавшаяся «ганзой»."
         ],
         "enParagraphs": [
           "Geralt of Rivia, known as the White Wolf, is the central hero of the saga and one of the North's finest swordsmen. A Wolf School witcher and a professional monster hunter, he is a living legend across the kingdoms.",
@@ -103,9 +112,9 @@
         "titleRu": "Галерея",
         "titleEn": "Gallery",
         "images": [
-          "/assets/background-wiki/Geralt/WITCHER1.png",
-          "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 2.png",
-          "/assets/background-wiki/Geralt/ГЕРАЛЬТ ИЗ 3.png"
+          "/assets/background-wiki/Geralt/geralt1.jpg",
+          "/assets/background-wiki/Geralt/geralt2.jpg",
+          "/assets/background-wiki/Geralt/geralt3.jpg"
         ]
       }
     }

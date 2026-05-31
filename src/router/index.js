@@ -4,7 +4,6 @@ import HomePage from '../pages/HomePage.vue'
 import MonstersPage from '../pages/MonstersPage.vue'
 import CharacterPage from '../pages/CharacterPage.vue'
 import CharacterDetailsPage from '../pages/CharacterDetailsPage.vue'
-import GeraltWiki from '../pages/GeraltWiki.vue'
 
 const routes = [
     { path: '/', component: HomePage },
@@ -17,8 +16,6 @@ const routes = [
     { path: '/kaer-morhen', component: () => import('../pages/KaerMorhenPage.vue') },
     { path: '/toussaint', component: () => import('../pages/ToussaintPage.vue') },
     { path: '/gunterworld', component: () => import('../pages/GunterWorldPage.vue') },
-    { path: '/geraltwiki', component: () => import('../pages/GeraltWiki.vue') },
-    { path: '/wiki/geralt', name: 'GeraltWiki', component: GeraltWiki },
     { path: '/characters/:id', name: 'CharacterDetails', component: CharacterDetailsPage }
 ]
 
