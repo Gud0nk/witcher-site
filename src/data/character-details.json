@@ -74,6 +74,86 @@
       "sections": [
         {
           "bg": "/assets/background-wiki/Geralt/fon2.png",
+          "textRu": "В каждой из игр Геральт имеет возможность пользоваться огромным количеством как стальных, так и серебряных мечей, которые имеют разные особенности, внешний вид и характеристики. Также в играх встречается различное дополнительное оружие: кинжалы, метательные ножи, \nпосохи, дубинки, палицы, топоры, секиры, кочерги, лопаты и прочие предметы, используемые в качестве оружия. Отличительной особенностью этого вида оружия в первых двух частях является его ношение слева на боку, а не за спиной, в то время как в третьей части всё своё вооружение Геральт носит за спиной. Стоит отметить, что во второй части игры есть несколько фактически стальных мечей, которые входят в категорию дополнительного оружия, а потому будут располагаться в ножнах на боку.\n",
+          "textEn": "In each of the games, Geralt has the opportunity to use a huge number of both steel and silver swords, which have different features, appearance and characteristics. Also in the games there is a variety of additional weapons: daggers, throwing knives, \nstaffs, clubs, maces, axes, axes, poker, shovel and other objects used as weapons. A distinctive feature of this type of weapon in the first two parts is that it is carried on the left side, rather than behind the back, while in the third part, Geralt carries all of his weapons behind his back. It is worth noting that in the second part of the game, there are several actual steel swords that are classified as additional weapons and are therefore carried in sheaths on the side.",
+          "image": "/assets/background-wiki/Geralt/swords.png"
+        },
+        {
+          "bg": "/assets/background-wiki/Geralt/fon3.png",
+          "titleRu": "Внешность",
+          "titleEn": "Appearance",
+          "textRu": "Геральт описывается как высокий, худощавый, стройный, неестественно бледный «не молодой и не старый» мужчина с полностью седыми как молоко волосами, в книгах перехваченными на лбу кожаной повязкой, в играх же собранными в высокий хвост на затылке. Он также имеет жёлтые фосфоресцирующие глаза с вертикальными зрачками. Маг Пинетти в одном из писем Коралл пишет, что у Геральта неухоженные ногти, что неудивительно при таком образе жизни. Йеннифэр же описывает его как своеобразно красивого, однако многие другие персонажи саги говорят, что лицо у Геральта неприятное. Трисс Меригольд в мыслях описывает \nлицо ведьмака как «измученное, истощённое и иссечённое морщинами», а глаза ― как \n«всевидящие, больные и видевшие слишком много».",
+          "textEn": "Geralt is described as a tall, thin, slender, unnaturally pale \"not young and not old\" man with completely white hair, in the books tied back with a leather band, in the games tied in a high ponytail on the back of his head. He also has yellow, phosphorescent eyes with vertical pupils. Pinetti's magician Coral writes in one of his letters that Geralt has unkempt nails, which is not surprising given his lifestyle. Yennefer describes him as uniquely handsome, but many other characters in the saga say that Geralt's face is unpleasant. Triss Marigold describes in her mind \nThe witcher's face is described as \"haggard, emaciated, and lined,\" and his eyes as \n\"the all-seers, the sick, and those who have seen too much.\"",
+          "image": "/assets/background-wiki/Geralt/vneshonst.png",
+          "image2": "/assets/background-wiki/Geralt/vneshonst2.png"
+        },
+        {
+          "bg": "/assets/background-wiki/Geralt/fon4.png",
+          "titleRu": "Шрамы",
+          "titleEn": "Scars",
+          "textRu": "Всё тело ведьмака покрыто шрамами от ранений, полученных в схватках с монстрами и людьми. В литературной саге упоминаются несколько конкретных ранений, и, соответственно, шрамов: шрам на шее Геральт получил от стрыги в ходе событий рассказа «Ведьмак»;\nрубец, пересекающий грудь, упоминает Йеннифэр в рассказе «Последнее желание», спрашивая, не попадал ли ведьмак под пилу на лесопилке;\nшрам на левом предплечье, доходящий до локтя, Геральт получил в схватке с рыболюдьми в ходе событий рассказа «Немного жертвенности»;\nшрам на бедре Геральт получил при нападении накеров в ходе событий рассказа «Нечто большее»;\nшрам на плече Геральт получил в схватке с братьями Мишеле в ходе событий книги «Кровь эльфов»;\nГеральту отрывает ухо арбалетным болтом в ходе событий книги «Башня Ласточки», хотя очень вероятно, что ухо было восстановлено магией Фрингильи Виго;\nпоследний шрам (а точнее, три отдельных шрама) на груди Геральт получил от удара вилами, которое нанёс ведьмаку Роб в ходе событий книги «Владычица Озера».",
+          "textEn": "The witcher's entire body is covered in scars from injuries sustained in battles with monsters and humans. Several specific wounds are mentioned in the literary saga, and, accordingly, scars: Geralt received a scar on his neck from a sling during the events of The Witcher story; a scar crossing his chest mentions Yennefer in the story \"Last Wish\", asking if the witcher was under a saw at a sawmill; a scar on his left forearm, reaching up to the elbow, Geralt received in a fight with the fishmen during the events of the story \"A little sacrifice\"; a scar on his hip Geralt received when attacked by nackers during the events of the story \"Something more\"; a scar on his shoulder Geralt received in a fight with the Michele brothers during the events of the book \"Blood of Elves\"; rips off an ear with a crossbow bolt during the events of the book \"Tower of the Swallow\", although it is very likely that the ear was restored by the magic of Fringilla Vigo; the last scar (or rather, three separate scars) on Geralt's chest was from a pitchfork blow inflicted by Rob the witcher.",
+          "image": "/assets/background-wiki/Geralt/shram.png"
+        }
+      ],
+      "signs": {
+        "bg": "/assets/background-wiki/Geralt/fon5.png",
+        "titleRu": "Ведьмачьи знаки",
+        "titleEn": "Witcher Signs",
+        "icons": [
+          "/assets/background-wiki/Geralt/aard.png",
+          "/assets/background-wiki/Geralt/irden.png",
+          "/assets/background-wiki/Geralt/igni.png",
+          "/assets/background-wiki/Geralt/axi.png",
+          "/assets/background-wiki/Geralt/qwen.png"
+        ]
+      },
+      "video": "/assets/background-wiki/Geralt/fon6.mp4",
+      "gallery": {
+        "titleRu": "Галерея",
+        "titleEn": "Gallery",
+        "images": [
+          "/assets/background-wiki/Geralt/geralt1.jpg",
+          "/assets/background-wiki/Geralt/geralt2.jpg",
+          "/assets/background-wiki/Geralt/geralt3.jpg"
+        ]
+      }
+    },
+    "ciri": {
+      "layout": {
+        "hero": {"display": "grid", "columns": "1fr 2fr", "minHeight": "620px", "gap": "20px", "alignItems": "center"},
+        "signs": {"display": "flex", "gap": "24px", "wrap": true, "iconSize": "52px"},
+        "gallery": {"columns": 3, "gap": "10px", "height": "140px"}
+      },
+      "hero": {
+        "bg": "/assets/background-wiki/Geralt/fon1.png",
+        "tabs": [
+          {
+            "name": "ВЕДЬМАК 3: ДИКАЯ ОХОТА",
+            "image": "/assets/background-wiki/Geralt/WITCHER3.png"
+          },
+          {
+            "name": "ВЕДЬМАК 2: УБИЙЦЫ КОРОЛЕЙ",
+            "image": "/assets/background-wiki/Geralt/WITCHER2.png"
+          },
+          {
+            "name": "ВЕДЬМАК 1",
+            "image": "/assets/background-wiki/Geralt/WITCHER1.png"
+          }
+        ],
+        "image": "public/assets/background-wiki/Geralt/WITCHER3.png",
+        "ruParagraphs": [
+          "Геральт из Ривии, прозванный Белым Волком и Мясником из Блавикена, — главный герой литературной саги и комиксов, а также протагонист последующих компьютерных игр, Ведьмак из Школы Волка, профессиональный охотник на чудовищ, один из лучших фехтовальщиковСевера, герой сказаний и легенд и невольный телохранитель королей.",
+          "Имеет романтический интерес к двум чародейкам: Йеннифер из Венгерберга и Трисс Меригольд. Его лучшими друзьями помимо ведьмаков из своей школы являются бард по имени Лютик, краснолюд Золтан Хивай и высший вампир Эмиель Регис, а в ходе странствия во время Второй Северной войны вокруг Белого Волка образовалась компания товарищей, именовавшаяся «ганзой»."
+        ],
+        "enParagraphs": [
+          "Geralt of Rivia, known as the White Wolf, is the central hero of the saga and one of the North's finest swordsmen. A Wolf School witcher and a professional monster hunter, he is a living legend across the kingdoms.",
+          "His journey runs through wars, intrigue, and ancient curses. Among those closest to him are Yennefer, Triss, Dandelion, and loyal companions who become his own fellowship."
+        ]
+      },
+      "sections": [
+        {
+          "bg": "/assets/background-wiki/Geralt/fon2.png",
           "titleRu": "Характер",
           "titleEn": "Character",
           "textRu": "Геральт сдержан, ироничен и следует собственному кодексу. За внешней холодностью скрывается готовность защищать слабых и верность близким.",

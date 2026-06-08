@@ -104,15 +104,7 @@ const switchTab = (index) => {
             <div class="content-container hero-grid">
               <div class="hero-left">
                 <div class="hero-tabs">
-    <span
-        v-for="(tab, index) in wiki.hero.tabs"
-        :key="index"
-        class="tab-btn"
-        :class="{ active: activeTabIndex === index }"
-        @click="switchTab(index)"
-    >
-      {{ tab.name }}
-    </span>
+                    <span v-for="(tab, index) in wiki.hero.tabs" :key="index" class="tab-btn" :class="{ active: activeTabIndex === index }" @click="switchTab(index)">{{ tab.name }}</span>
                 </div>
 
                 <!-- Плавная смена картинки -->
@@ -123,7 +115,6 @@ const switchTab = (index) => {
 
               <div class="hero-content">
                 <div class="hero-copy">
-                  <!-- Статичный текст (не меняется!) -->
                   <p v-for="(line, i) in (locale === 'en' ? wiki.hero.enParagraphs : wiki.hero.ruParagraphs)" :key="i">
                     {{ line }}
                   </p>
@@ -363,8 +354,8 @@ const switchTab = (index) => {
 .scar {
   width: 100%;
   max-width: 450px;
-  border: 1px solid rgba(184,148,69,0.3);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+  //border: 1px solid rgba(184,148,69,0.3); это короче рамка
+  //box-shadow: 0 12px 40px rgba(0,0,0,0.7); а это короче тень
 }
 
 /* ================= 5. ЗНАКИ ВЕДЬМАКА ================= */
