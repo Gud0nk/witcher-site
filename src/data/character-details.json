@@ -10,7 +10,7 @@
   },
   "charactersEn": {
     "Геральт из Ривии": { "name": "Geralt of Rivia", "description": "A Wolf School witcher, legendary monster hunter and the central hero of the game." },
-    "Цири": { "name": "Ciri", "description": "Child of the Elder Blood, hunted by the Wild Hunt." },
+    "Цири": { "name": "ciri", "description": "Child of the Elder Blood, hunted by the Wild Hunt." },
     "Йеннифэр": { "name": "Yennefer", "description": "A powerful sorceress and key ally in the search for Ciri." },
     "Трисс Меригольд": { "name": "Triss Merigold", "description": "A sorceress and diplomat who protects mages in Novigrad." },
     "Весемир": { "name": "Vesemir", "description": "The oldest witcher of Kaer Morhen and Geralt's mentor." },
@@ -129,19 +129,15 @@
         "bg": "/assets/background-wiki/Geralt/fon1.png",
         "tabs": [
           {
-            "name": "ВЕДЬМАК 3: ДИКАЯ ОХОТА",
-            "image": "/assets/background-wiki/Geralt/WITCHER3.png"
+            "name": "ЦИРИ МАЛЕНЬКАЯ",
+            "image": "/assets/background-wiki/Ciri/ciri-small.png"
           },
           {
-            "name": "ВЕДЬМАК 2: УБИЙЦЫ КОРОЛЕЙ",
-            "image": "/assets/background-wiki/Geralt/WITCHER2.png"
-          },
-          {
-            "name": "ВЕДЬМАК 1",
-            "image": "/assets/background-wiki/Geralt/WITCHER1.png"
+            "name": "ЦИРИ ВЗРОСЛАЯ",
+            "image": "/assets/background-wiki/Ciri/ciri-notsmall.png"
           }
         ],
-        "image": "public/assets/background-wiki/Geralt/WITCHER3.png",
+        "image": "public/assets/background-wiki/Geralt/ciri-notsmall.png",
         "ruParagraphs": [
           "Геральт из Ривии, прозванный Белым Волком и Мясником из Блавикена, — главный герой литературной саги и комиксов, а также протагонист последующих компьютерных игр, Ведьмак из Школы Волка, профессиональный охотник на чудовищ, один из лучших фехтовальщиковСевера, герой сказаний и легенд и невольный телохранитель королей.",
           "Имеет романтический интерес к двум чародейкам: Йеннифер из Венгерберга и Трисс Меригольд. Его лучшими друзьями помимо ведьмаков из своей школы являются бард по имени Лютик, краснолюд Золтан Хивай и высший вампир Эмиель Регис, а в ходе странствия во время Второй Северной войны вокруг Белого Волка образовалась компания товарищей, именовавшаяся «ганзой»."
